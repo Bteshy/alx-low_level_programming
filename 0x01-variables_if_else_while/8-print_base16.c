@@ -14,7 +14,7 @@ int main(void)
 		putchar (48 + n);
 		n++;
 	}
-	while (l <= f)
+	while (l <= 'f')
 	{
 		putchar (l);
 		l++;
