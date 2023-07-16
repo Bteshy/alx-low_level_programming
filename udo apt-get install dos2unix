@@ -1,0 +1,52 @@
+0-positive_or_negative.c[36m:[m1[36m:[m#include <stdlib.h>[1;31m[m
+0-positive_or_negative.c[36m:[m2[36m:[m#include <stdio.h>[1;31m[m
+0-positive_or_negative.c[36m:[m3[36m:[m#include <time.h>[1;31m[m
+0-positive_or_negative.c[36m:[m4[36m:[m/**[1;31m[m
+0-positive_or_negative.c[36m:[m5[36m:[m * main - main block[1;31m[m
+0-positive_or_negative.c[36m:[m6[36m:[m * Description: Get a random number and print the number[1;31m[m
+0-positive_or_negative.c[36m:[m7[36m:[m * and if it is positive, negative, or zero[1;31m[m
+0-positive_or_negative.c[36m:[m8[36m:[m * Return: 0[1;31m[m
+0-positive_or_negative.c[36m:[m9[36m:[m */[1;31m[m
+0-positive_or_negative.c[36m:[m10[36m:[mint main(void)[1;31m[m
+0-positive_or_negative.c[36m:[m11[36m:[m{[1;31m[m
+0-positive_or_negative.c[36m:[m12[36m:[m	int n;[1;31m[m
+0-positive_or_negative.c[36m:[m13[36m:[m[1;31m[m
+0-positive_or_negative.c[36m:[m14[36m:[m	srand(time(0));[1;31m[m
+0-positive_or_negative.c[36m:[m15[36m:[m	n = rand() - RAND_MAX / 2;[1;31m[m
+0-positive_or_negative.c[36m:[m16[36m:[m	/* your code goes there */[1;31m[m
+0-positive_or_negative.c[36m:[m17[36m:[m        if (n > 0)[1;31m[m
+0-positive_or_negative.c[36m:[m18[36m:[m		printf("%d is positive\n", n );[1;31m[m
+0-positive_or_negative.c[36m:[m19[36m:[m        else if (n < 0)[1;31m[m
+0-positive_or_negative.c[36m:[m20[36m:[m		printf("%d is negative\n", n);[1;31m[m
+0-positive_or_negative.c[36m:[m21[36m:[m        else[1;31m[m
+0-positive_or_negative.c[36m:[m22[36m:[m		printf("%d is zero\n", n);[1;31m[m
+0-positive_or_negative.c[36m:[m23[36m:[m[1;31m[m
+0-positive_or_negative.c[36m:[m24[36m:[m	return (0);[1;31m[m
+0-positive_or_negative.c[36m:[m25[36m:[m  [1;31m[m
+0-positive_or_negative.c[36m:[m26[36m:[m}[1;31m[m
+1-last_digit.c[36m:[m1[36m:[m#include <stdio.h>[1;31m[m
+1-last_digit.c[36m:[m2[36m:[m#include <stdlib.h>[1;31m[m
+1-last_digit.c[36m:[m3[36m:[m#include <time.h>[1;31m[m
+1-last_digit.c[36m:[m4[36m:[m/**[1;31m[m
+1-last_digit.c[36m:[m5[36m:[m * main - main block[1;31m[m
+1-last_digit.c[36m:[m6[36m:[m * Description: Get a random number and check its last digit, compare it with 5[1;31m[m
+1-last_digit.c[36m:[m7[36m:[m * Return: 0[1;31m[m
+1-last_digit.c[36m:[m8[36m:[m */[1;31m[m
+1-last_digit.c[36m:[m9[36m:[mint main(void)[1;31m[m
+1-last_digit.c[36m:[m10[36m:[m{[1;31m[m
+1-last_digit.c[36m:[m11[36m:[m	int n;[1;31m[m
+1-last_digit.c[36m:[m12[36m:[m        int last_digit;[1;31m[m
+1-last_digit.c[36m:[m13[36m:[m[1;31m[m
+1-last_digit.c[36m:[m14[36m:[m	srand(time(0));[1;31m[m
+1-last_digit.c[36m:[m15[36m:[m	n = rand() - RAND_MAX / 2;[1;31m[m
+1-last_digit.c[36m:[m16[36m:[m	last_digit = n % 10;[1;31m[m
+1-last_digit.c[36m:[m17[36m:[m	[1;31m[m
+1-last_digit.c[36m:[m18[36m:[m	if (last_digit > 5)[1;31m[m
+1-last_digit.c[36m:[m19[36m:[m		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);[1;31m[m
+1-last_digit.c[36m:[m20[36m:[m        else if (last_digit == 0)[1;31m[m
+1-last_digit.c[36m:[m21[36m:[m		printf("Last digit of %d is %d and is 0\n", n, last_digit);[1;31m[m
+1-last_digit.c[36m:[m22[36m:[m        else if (last_digit < 6 )[1;31m[m
+1-last_digit.c[36m:[m23[36m:[m		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_digit);[1;31m[m
+1-last_digit.c[36m:[m24[36m:[m  [1;31m[m
+1-last_digit.c[36m:[m25[36m:[m	return (0);[1;31m[m
+1-last_digit.c[36m:[m26[36m:[m}[1;31m[m
