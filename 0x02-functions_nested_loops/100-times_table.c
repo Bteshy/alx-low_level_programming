@@ -1,54 +1,33 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * print_times_table - prints the times table
- * @n: integer for which the times table will be printed
- *
- * Description: prints the times table
- *
- * Return: void
- */
+void print_row(int row, int n) {
+    int product, tens, ones;
 
-void print_times_table(int n)
-{
-	int row, column, product;
+    for (int column = 0; column <= n; column++) {
+        product = row * column;
+        tens = product / 10;
+        ones = product % 10;
 
-	if (n >= 0 && n < 15)
-	{
-		for (row = 0; row <= n; row++)
-		{
-			for (column = 0; column <= n; column++)
-			{
-				product = row * column;
+        if (column == 0)
+            printf("%2d", product);
+        else
+            printf(", %2d", product);
+    }
 
-				if (column == 0)
-					_putchar('0');
-				else if (product < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product % 10 + '0');
-				}
-				else if (product >= 10 && product < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-				else if (product > 99 && product < 1000)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(product / 100 + '0');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-			}
-			_putchar('\n');
-		}
-	}
+    printf("\n");
+}
+
+void times_table(int n) {
+    if (n >= 0 && n < 15) {
+        for (int row = 0; row <= n; row++) {
+            print_row(row, n);
+        }
+    }
+}
+
+int main() {
+    int n = 9;
+    times_table(n);
+
+    return 0;
 }
