@@ -12,7 +12,6 @@
 void print_times_table(int n)
 {
 	int row, column, product, tens, ones, hundreds;
-
 	if (n >= 0 && n < 15)
 	{
 		for (row = 0; row <= n; row++)
@@ -23,7 +22,6 @@ void print_times_table(int n)
 				hundreds = product / 100;
 				tens = (product / 10) % 10;
 				ones = product % 10;
-
 				if (column == 0)
 					_putchar('0');
 				else if (product < 10)
