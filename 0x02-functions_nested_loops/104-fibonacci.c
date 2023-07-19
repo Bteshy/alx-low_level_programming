@@ -4,7 +4,7 @@ int main() {
     int count = 98;
     int fib1 = 1, fib2 = 2;
     int fib;
-    int i = 3
+    int i = 3;
 
     printf("%d, %d", fib1, fib2);
 
