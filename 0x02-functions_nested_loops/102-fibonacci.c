@@ -6,21 +6,22 @@
  * Return: Always 0 (Success)
  */
 
-int main() {
-    int count = 50;
-    long long int fib1 = 1, fib2 = 2;
+int main(void)
+{
+	int count = 50;
+	long long int fib1 = 1, fib2 = 2;
 
-    printf("%lld, %lld", fib1, fib2);
+	printf("%lld, %lld", fib1, fib2);
 
-    for (int i = 3; i <= count; i++) {
-        long long int fib = fib1 + fib2;
-        printf(", %lld", fib);
+	for (int i = 3; i <= count; i++)
+	{
+		long long int fib = fib1 + fib2;
 
-        fib1 = fib2;
-        fib2 = fib;
-    }
+		printf(", %lld", fib);
 
-    printf("\n");
-
-    return 0;
+		fib1 = fib2;
+		fib2 = fib;
+	}
+	printf("\n");
+	return (0);
 }
