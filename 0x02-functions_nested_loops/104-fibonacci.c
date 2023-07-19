@@ -4,10 +4,11 @@ int main() {
     int count = 98;
     int fib1 = 1, fib2 = 2;
     int fib;
+    int i = 3
 
     printf("%d, %d", fib1, fib2);
 
-    for (int i = 3; i <= count; i++) {
+    for (i = 3; i <= count; i++) {
         fib = fib1 + fib2;
         printf(", %d", fib);
 
