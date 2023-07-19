@@ -5,23 +5,27 @@
  * followed by a new line
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int count = 50;
-	long long int fib1 = 1, fib2 = 2;
+	long int i, j, k, next;
 
-	printf("%lld, %lld", fib1, fib2);
+	j = 1;
 
-	for (int i = 3; i <= count; i++)
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-		long long int fib = fib1 + fib2;
-
-		printf(", %lld", fib);
-
-		fib1 = fib2;
-		fib2 = fib;
+		if (j != 20365011074)
+		{
+			printf("%ld, ", j);
+		} else
+		{
+			printf("%ld\n", j);
+		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
-	printf("\n");
+
 	return (0);
 }
