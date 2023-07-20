@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include "main.h"
 
@@ -20,3 +21,23 @@ void positive_or_negative(int i)
 	else
 		printf("%d is positive\n", i);
 }
+=======
+#include <stdio.h>
+#include "main.h"
+
+/**.
+ * @i: The integer to be evaluated.
+ * Description: Prints whether the 
+ * is positive, negative, or zero.
+ */
+
+void positive_or_negative(int i)
+{
+	if (i < 0)
+		printf("%d is negative\n", i);
+	else if (i == 0)
+		printf("0 is zero\n");
+	else
+		printf("%d is positive\n", i);
+}
+>>>>>>> f5c79ff868c1c3d11254d2824d91eb630aa082ef
