@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * positive_or_negative - Determines if an integer
- * is positive, negative, or zero.
+/**.
  * @i: The integer to be evaluated.
- *
  * Description: Prints whether the 
  * is positive, negative, or zero.
  */
