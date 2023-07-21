@@ -1,59 +1,29 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdint.h>
+#include "main.h"
 
 /**
- * max_prime_factor - calculate largest prime factor of number
- * @n: number to calculate
- * Return: the largest factor
+ * print_number - function that prints an integer
+ * @n: value to be printed
  */
-long max_prime_factor(int64_t n)
+
+void print_number(int n)
 {
-	long i, max = -1;
-
-	while (n % 2 == 0)
-	{
-		max = 2;
-		n = n / 2;
-	}
-
-	while (n % 3 == 0)
-	{
-		max = 3;
-		n = n / 3;
-	}
-
-	for (i = 5; i <= sqrt(n); i = i + 6)
-	{
-		while (n % i == 0)
-		{
-			max = i;
-			n = n / i;
-		}
-
-		while (n % (i + 2) == 0)
-		{
-			max = i + 2;
-			n = n / (i + 2);
-		}
-	}
-
-	if (n > 4)
-	{
-		max = n;
-	}
-
-	return (max);
+	putchar_many(n);
 }
 
 /**
- * main - calculate largest prime factor of number
- * Return: 0
+ * putchar_many - function that prints using putchar
+ * @n: value to be printed using putchar
  */
-int main(void)
+void putchar_many(int n)
 {
-	int64_t n = 612852475143;
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
 
-	printf("%ld\n", max_prime_factor(n));
-	return (0);
+	if (n / 10)
+		putchar_many(n / 10);
+
+	_putchar(n % 10 + '0');
 }
