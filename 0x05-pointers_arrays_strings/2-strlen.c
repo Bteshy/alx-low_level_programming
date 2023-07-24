@@ -7,8 +7,12 @@
 */
 void swap_int(int *a, int *b)
 {
-	int temp = *a;
-
-	*a = *b;
-	*b = temp;
+	int len = 0;
+	
+	while (*s != '\0') 
+		{
+			len++;
+			s++;
+		}
+    return length;
 }
