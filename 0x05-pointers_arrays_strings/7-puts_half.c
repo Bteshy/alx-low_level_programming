@@ -20,7 +20,9 @@ void puts_half(char *str)
   {
     start_index = (length - 1) / 2;
   }
-  for (int i = start_index; i < length; i++) 
+  int i =0;
+  
+  for (i = start_index; i < length; i++) 
   {
         printf("%c", str[i]);
   }
