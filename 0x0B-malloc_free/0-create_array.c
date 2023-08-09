@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -8,24 +8,23 @@
   *
   * Return: The array filled
   */
+char *create_array(unsigned int size, char c)
+{
+	unsigned int i;
+	char *s;
 
+	if (size == 0)
+		return (NULL);
 
-char *create_array(unsigned int size, char c) {
-    if (size == 0) {
-        return NULL;
-    }
+	s = malloc(size * sizeof(char));
 
-    char *array = (char *)malloc(sizeof(char) * size);
-    
-    if (array == NULL) {
-        return NULL;
-    }
+	if (s == NULL)
+		return (NULL);
 
-    unsigned int i;  // Declare 'i' outside of the loop in C90 mode
+	for (i = 0; i < size; i++)
+	{
+		s[i] = c;
+	}
 
-    for (i = 0; i < size; i++) {
-        array[i] = c;
-    }
-
-    return array;
+	return (s);
 }
