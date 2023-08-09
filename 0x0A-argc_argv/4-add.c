@@ -11,38 +11,39 @@
 
 int main(int argc, char *argv[])
 {
-	int i, int j, res = 0, flag = 0;
+	int i, res = 0, flag = 0;
 
 	if (argc <= 1)
-	{
-		printf("0\n");
-		return (0);
-	}
+		res = 0;
 
 	else
 	{
 		for (i = 1; i < argc; i++)
 		{
-			for(j = 0; argv[i][j] != '\0'; j++)
-				{
-					if (!(isdigit(*argv[i])))
-					{
-						flag = 1;
-						break;
-					}
-				}
-			if (flag == 1)
+			if (!(isdigit(*argv[i])))
 			{
-				printf("Error\n");
-				return (1);
+				flag = 1;
 			}
 
-			res += atoi(argv[i]);
+			res += atoi(&(*argv[i]));
 		}
 	}
-		
-	printf("%d\n", res);
-	return (0);
-}
 
-	
+	if (flag == 1 && res != 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	else if (flag == 1 && res == 0)
+	{
+		printf("%d\n", res);
+		return (0);
+	}
+
+	else
+	{
+		printf("%d\n", res);
+		return (0);
+	}
+}
