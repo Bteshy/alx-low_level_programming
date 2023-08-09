@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 char *argstostr(int ac, char **av) {
     if (ac == 0 || av == NULL) {
