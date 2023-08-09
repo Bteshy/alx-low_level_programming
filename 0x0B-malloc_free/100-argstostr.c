@@ -31,29 +31,31 @@ char **strtow(char *str) {
             c++;
         }
 
-        char *word = (char *)malloc((c - word_start + 1) * sizeof(char));
-        if (word == NULL) {
-            for (int i = 0; i < num_words - 1; i++) {
-                free(words[i]);
+        {
+            char *word = (char *)malloc((c - word_start + 1) * sizeof(char));
+            if (word == NULL) {
+                for (int i = 0; i < num_words - 1; i++) {
+                    free(words[i]);
+                }
+                free(words);
+                return NULL;
             }
-            free(words);
-            return NULL;
-        }
 
-        strncpy(word, word_start, c - word_start);
-        word[c - word_start] = '\0';
+            strncpy(word, word_start, c - word_start);
+            word[c - word_start] = '\0';
 
-        words = (char **)realloc(words, num_words * sizeof(char *));
-        if (words == NULL) {
-            free(word);
-            for (int i = 0; i < num_words - 1; i++) {
-                free(words[i]);
+            words = (char **)realloc(words, num_words * sizeof(char *));
+            if (words == NULL) {
+                free(word);
+                for (int i = 0; i < num_words - 1; i++) {
+                    free(words[i]);
+                }
+                free(words);
+                return NULL;
             }
-            free(words);
-            return NULL;
-        }
 
-        words[num_words - 1] = word;
+            words[num_words - 1] = word;
+        }
     }
 
     words = (char **)realloc(words, (num_words + 1) * sizeof(char *));
